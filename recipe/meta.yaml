@@ -14,10 +14,10 @@ source:
     folder: src
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
- 
+
 requirements:
   build:
     - {{ compiler('c') }}
@@ -39,18 +39,18 @@ test:
     - h5py
     - python
   commands:
-    - python test_plugin.py 
+    - python test_plugin.py
 
 about:
     license: '3-Clause BSD'
     license_file: 'LICENSE'
     home: https://github.com/Blosc/hdf5-blosc
-    summary: HDF5 plugin for BLOSC filter 
+    summary: HDF5 plugin for BLOSC filter
     description: |
         The plugin is being placed into HDF5 plugin directory, so it can be dynamically
-        loaded. This enables the usage for other libraries like h5py. We use our own 
-        CMakeLists here to enable easy linking against Conda-Forges BLOSC library. 
+        loaded. This enables the usage for other libraries like h5py. We use our own
+        CMakeLists here to enable easy linking against Conda-Forges BLOSC library.
 
 extra:
   recipe-maintainers:
-    - marscher 
+    - marscher
