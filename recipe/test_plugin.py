@@ -4,6 +4,9 @@ import tempfile
 import numpy as np
 
 with tempfile.NamedTemporaryFile() as ntf:
+    # Close the file so it can be re-opened by HDF5
+    ntf.close()
+    # Truncate the file
     f = h5py.File(ntf.name, mode='w')
     complevel = 9
     complib = 'blosc:lz4'
@@ -18,3 +21,4 @@ with tempfile.NamedTemporaryFile() as ntf:
         }
         print('compression args:', args)
         f.create_dataset('test_%s' % c, data=data, chunks=True, **args)
+    f.close()
