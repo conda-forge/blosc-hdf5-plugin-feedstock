@@ -5,7 +5,7 @@ import tempfile
 import numpy as np
 
 with tempfile.NamedTemporaryFile() as ntf:
-    f = h5py.File(ntf.name)
+    f = h5py.File(ntf.name, mode='w+')
     complevel = 9
     complib = 'blosc:lz4'
     shuffle = True
