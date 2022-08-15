@@ -14,7 +14,7 @@ source:
     folder: src
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win]
 
 
