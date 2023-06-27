@@ -1,11 +1,11 @@
-About blosc-hdf5-plugin
-=======================
+About blosc-hdf5-plugin-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blosc-hdf5-plugin-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Blosc/hdf5-blosc
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blosc-hdf5-plugin-feedstock/blob/main/LICENSE.txt)
 
 Summary: HDF5 plugin for BLOSC filter
 
