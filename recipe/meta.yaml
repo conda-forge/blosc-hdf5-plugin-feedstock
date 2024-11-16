@@ -1,10 +1,10 @@
 {% set name = "blosc-hdf5-plugin" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "007a8bf0c7d0a571615685a4c0bd1768ed9137b7c41d0edf65f3fab71b7c19c1" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "dcb249c007ed10b030e36d96bfc4404a2e45823eb8c3aae863e33d407e7b6cda" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
   - url: https://github.com/Blosc/hdf5-blosc/archive/v{{ version }}.tar.gz
@@ -14,13 +14,14 @@ source:
     folder: src
 
 build:
-  number: 7
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
 
   host:
@@ -42,14 +43,14 @@ test:
     - python test_plugin.py
 
 about:
-    license: 'BSD-3-Clause'
-    license_file: 'LICENSE'
-    home: https://github.com/Blosc/hdf5-blosc
-    summary: HDF5 plugin for BLOSC filter
-    description: |
-        The plugin is being placed into HDF5 plugin directory, so it can be dynamically
-        loaded. This enables the usage for other libraries like h5py. We use our own
-        CMakeLists here to enable easy linking against Conda-Forges BLOSC library.
+  license: 'BSD-3-Clause'
+  license_file: 'LICENSE'
+  home: https://github.com/Blosc/hdf5-blosc
+  summary: HDF5 plugin for BLOSC filter
+  description: |
+    The plugin is being placed into HDF5 plugin directory, so it can be dynamically
+    loaded. This enables the usage for other libraries like h5py. We use our own
+    CMakeLists here to enable easy linking against Conda-Forges BLOSC library.
 
 extra:
   recipe-maintainers:
