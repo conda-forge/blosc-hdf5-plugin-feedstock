@@ -29,6 +29,7 @@ requirements:
     - blosc
     - cmake <4
     - make
+    - zlib
   run:
     - blosc
     - hdf5
